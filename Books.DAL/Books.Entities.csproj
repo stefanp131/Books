@@ -57,6 +57,10 @@
     <Compile Include="Migrations\201703130343096_ChangedRestrictionsForBookEntity.Designer.cs">
       <DependentUpon>201703130343096_ChangedRestrictionsForBookEntity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703131436452_ChangedRelationshipBetweenEntitiesToManyToMany.cs" />
+    <Compile Include="Migrations\201703131436452_ChangedRelationshipBetweenEntitiesToManyToMany.Designer.cs">
+      <DependentUpon>201703131436452_ChangedRelationshipBetweenEntitiesToManyToMany.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Role.cs" />
     <Compile Include="Person.cs" />
@@ -72,6 +76,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703130343096_ChangedRestrictionsForBookEntity.resx">
       <DependentUpon>201703130343096_ChangedRestrictionsForBookEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703131436452_ChangedRelationshipBetweenEntitiesToManyToMany.resx">
+      <DependentUpon>201703131436452_ChangedRelationshipBetweenEntitiesToManyToMany.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -35,11 +35,16 @@ namespace Books.Models
 
         public static PersonViewModel MapPerson(this Person person)
         {
-            var roleShelf = new List<BookViewModel>();
-            person.RoleShelf.ForEach(x => roleShelf.Add(x.MapBook()));
-            var personVm = new PersonViewModel { Name = person.Name, Role = person.Role.MapRole(), RoleShelf = roleShelf };
+            var personVm = new PersonViewModel { Name = person.Name, Role = person.Role.MapRole() };
 
             return personVm;
+        }
+
+        public static Person MapPerson(this PersonViewModel personVm)
+        {
+            var person = new Person { Name = personVm.Name, Role = personVm.Role.MapRole() };
+
+            return person;
         }
 
         public static RoleViewModel MapRole(this Role Role)
@@ -50,6 +55,17 @@ namespace Books.Models
                 case Role.Critic: return RoleViewModel.Critic;
                 case Role.Reader: return RoleViewModel.Reader;
                 default: return RoleViewModel.Reader;
+            }
+        }
+
+        public static Role MapRole(this RoleViewModel RoleVm)
+        {
+            switch (RoleVm)
+            {
+                case RoleViewModel.Author: return Role.Author;
+                case RoleViewModel.Critic: return Role.Critic;
+                case RoleViewModel.Reader: return Role.Reader;
+                default: return Role.Reader;
             }
         }
     }

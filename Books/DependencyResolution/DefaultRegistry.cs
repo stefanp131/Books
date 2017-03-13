@@ -16,6 +16,7 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 namespace Books.DependencyResolution {
+    using Books.Entities;
     using Books.Repositories;
     using StructureMap;
     using StructureMap.Configuration.DSL;
@@ -31,7 +32,12 @@ namespace Books.DependencyResolution {
                     scan.WithDefaultConventions();
 					scan.With(new ControllerConvention());
                 });
-            For<IBookRepository>().Use<BookRepository>();
+            For<IRepository<Book>>().Use<Repository<Book>>();
+            For<IRepository<Person>>().Use<Repository<Person>>();
+
+            //For<IBookRepository>().Use<BookRepository>();
+            //For<IPersonRepository>().Use<PersonRepository>();
+            //For<IUOW>().Use<UOW>();
         }
 
         #endregion

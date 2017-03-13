@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Books.Models
 {
@@ -13,5 +14,6 @@ namespace Books.Models
         public decimal Price { get; set; }
         [StringLength(50)]
         public string Category { get; set; }
+        public virtual ICollection<PersonViewModel> ReadedBy { get; set; }
     }
 }

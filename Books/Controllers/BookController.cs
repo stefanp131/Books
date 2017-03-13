@@ -3,22 +3,26 @@ using System.Web.Mvc;
 using System.Linq;
 using Books.Models;
 using Books.Repositories;
+using Books.Entities;
 
 namespace Books.Controllers
 {
     public class BookController : Controller
     {
-        private IBookRepository bookRepository { get; set; }
-        public BookController(IBookRepository bookRepository)
+        private IRepository<Book> bookRepository { get; set; }
+        private IRepository<Person> personRepository { get; set; }
+
+        public BookController(IRepository<Book> bookRepository, IRepository<Person> personRepository)
         {
             this.bookRepository = bookRepository;
+            this.personRepository = personRepository;
         }
 
         // GET: Book
         public ActionResult Index()
         {
             var listBooksVm = new List<BookViewModel>();
-            bookRepository.GetAllBooks().ToList().ForEach(x => listBooksVm.Add(x.MapBook()));
+            bookRepository.GetAll().ToList().ForEach(x => listBooksVm.Add(x.MapBook()));
             return View(listBooksVm);
         }
 
@@ -33,7 +37,22 @@ namespace Books.Controllers
             if (ModelState.IsValid)
             {
                 var book = bookVm.MapBook();
-                bookRepository.Add(book);
+
+                var people = personRepository.GetAll().ToList();
+                var person = people.FirstOrDefault(x => x.Name == book.AuthorName);
+
+                if (person != null)
+                {
+                    person.RoleShelf.Add(book);
+                    personRepository.Save();
+                }
+                else
+                {
+                    person = new Person { Name = book.AuthorName, Role = Role.Author, Id = 0 };
+                    personRepository.AddEntity(person);
+                    person.RoleShelf.Add(book);
+                    personRepository.Save();
+                }
 
                 return RedirectToAction("Index");
             }
@@ -42,13 +61,13 @@ namespace Books.Controllers
 
         public ActionResult Details(int id)
         {
-            var book = bookRepository.GetBookById(id).MapBook();
+            var book = bookRepository.GetEntityById(id).MapBook();
             return View(book);
         }
 
         public ActionResult Edit(int id)
         {
-            var book = bookRepository.GetBookById(id).MapBook();
+            var book = bookRepository.GetEntityById(id).MapBook();
             return View(book);
         }
 
@@ -57,7 +76,7 @@ namespace Books.Controllers
         {
             if (ModelState.IsValid)
             {
-                var book = bookRepository.GetBookById(bookVm.Id);
+                var book = bookRepository.GetEntityById(bookVm.Id);
                 {
                     book.AuthorName = bookVm.AuthorName;
                     book.Title = bookVm.Title;

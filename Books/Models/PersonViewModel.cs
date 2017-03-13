@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Web.Mvc;
 
 namespace Books.Models
 {
@@ -7,6 +8,7 @@ namespace Books.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public RoleViewModel Role { get; set; }
-        public List<BookViewModel> RoleShelf { get; set; }
+        public virtual ICollection<BookViewModel> RoleShelf { get; set; }
+
     }
 }
