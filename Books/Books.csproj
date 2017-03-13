@@ -127,6 +127,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\StructuremapMvc.cs" />
     <Compile Include="Controllers\BookController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PersonController.cs" />
     <Compile Include="DependencyResolution\ControllerConvention.cs" />
     <Compile Include="DependencyResolution\DefaultRegistry.cs" />
@@ -152,6 +153,7 @@
     <Content Include="Views\Book\Edit.cshtml" />
     <Content Include="Views\Person\Index.cshtml" />
     <Content Include="Views\Person\Create.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
