@@ -35,14 +35,14 @@ namespace Books.Models
 
         public static PersonViewModel MapPerson(this Person person)
         {
-            var personVm = new PersonViewModel { Name = person.Name, Role = person.Role.MapRole() };
+            var personVm = new PersonViewModel {Id = person.Id, Name = person.Name, Role = person.Role.MapRole() };
 
             return personVm;
         }
 
         public static Person MapPerson(this PersonViewModel personVm)
         {
-            var person = new Person { Name = personVm.Name, Role = personVm.Role.MapRole() };
+            var person = new Person {Id = personVm.Id, Name = personVm.Name, Role = personVm.Role.MapRole() };
 
             return person;
         }

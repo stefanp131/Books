@@ -22,28 +22,55 @@ namespace Books.Controllers
         // GET: Person
         public ActionResult Index()
         {
-            var people = new List<PersonViewModel>();            
+            var people = new List<PersonViewModel>();
             personRepository.GetAll().ToList().ForEach(x => people.Add(x.MapPerson()));
             return View(people);
         }
 
         public ActionResult Create()
         {
-            var person = new PersonViewModel();
-            return View(person);
+            return View(new PersonViewModel());
         }
 
         [HttpPost]
         public ActionResult Create(PersonViewModel personVm)
         {
-            personRepository.AddEntity(personVm.MapPerson());
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                personRepository.AddEntity(personVm.MapPerson());
+                return RedirectToAction("Index");
+            }
+            return View(new PersonViewModel());
+        }
+
+        public ActionResult Details(int id)
+        {
+            var personVm = personRepository.GetEntityById(id).MapPerson();
+            return View(personVm);
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var personVm = personRepository.GetEntityById(id).MapPerson();
+            return View(personVm);
         }
 
         [HttpPost]
-        public ActionResult AddBook(PersonViewModel personVm)
+        public ActionResult Edit(PersonViewModel personVm)
         {
-            return RedirectToAction("Create");
+            var person = personRepository.GetEntityById(personVm.Id);
+            {
+                person.Name = personVm.Name;
+                person.Role = personVm.Role.MapRole();
+            }
+            personRepository.Save();
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Delete(int id)
+        {
+            personRepository.DeleteById(id);
+            return RedirectToAction("Index");
         }
     }
 }
