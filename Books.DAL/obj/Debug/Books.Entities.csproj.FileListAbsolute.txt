@@ -8,3 +8,6 @@ C:\Users\stefa\Documents\Visual Studio 2017\Projects\Books\Books.DAL\bin\Debug\E
 C:\Users\stefa\Documents\Visual Studio 2017\Projects\Books\Books.DAL\obj\Debug\Books.Entities.csprojResolveAssemblyReference.cache
 C:\Users\stefa\Documents\Visual Studio 2017\Projects\Books\Books.DAL\obj\Debug\Books.DAL.dll
 C:\Users\stefa\Documents\Visual Studio 2017\Projects\Books\Books.DAL\obj\Debug\Books.DAL.pdb
+C:\Users\stefa\Documents\Visual Studio 2017\Projects\Books\Books.DAL\obj\Debug\Books.DAL.Migrations.AddedRestrictionsForBookEntity.resources
+C:\Users\stefa\Documents\Visual Studio 2017\Projects\Books\Books.DAL\obj\Debug\Books.Entities.csproj.GenerateResource.Cache
+C:\Users\stefa\Documents\Visual Studio 2017\Projects\Books\Books.DAL\obj\Debug\Books.DAL.Migrations.ChangedRestrictionsForBookEntity.resources

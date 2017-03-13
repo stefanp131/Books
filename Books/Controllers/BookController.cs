@@ -30,10 +30,14 @@ namespace Books.Controllers
         [HttpPost]
         public ActionResult Create(BookViewModel bookVm)
         {
-            var book = bookVm.MapBook();
-            bookRepository.Add(book);
+            if (ModelState.IsValid)
+            {
+                var book = bookVm.MapBook();
+                bookRepository.Add(book);
 
-            return RedirectToAction("Index");
+                return RedirectToAction("Index");
+            }
+            return View(new BookViewModel());
         }
 
         public ActionResult Details(int id)
@@ -51,15 +55,19 @@ namespace Books.Controllers
         [HttpPost]
         public ActionResult Edit(BookViewModel bookVm)
         {
-            var book = bookRepository.GetBookById(bookVm.Id);
+            if (ModelState.IsValid)
             {
-                book.AuthorName = bookVm.AuthorName;
-                book.Title = bookVm.Title;
-                book.Price = bookVm.Price;
-                book.Category = bookVm.Category;
+                var book = bookRepository.GetBookById(bookVm.Id);
+                {
+                    book.AuthorName = bookVm.AuthorName;
+                    book.Title = bookVm.Title;
+                    book.Price = bookVm.Price;
+                    book.Category = bookVm.Category;
+                }
+                bookRepository.Save();
+                return RedirectToAction("Index");
             }
-            bookRepository.Save();
-            return RedirectToAction("Index");
+            return View(bookVm);
         }
 
         public ActionResult Delete(int id)

@@ -49,6 +49,15 @@
   <ItemGroup>
     <Compile Include="Book.cs" />
     <Compile Include="BooksDB.cs" />
+    <Compile Include="Migrations\201703130321567_AddedRestrictionsForBookEntity.cs" />
+    <Compile Include="Migrations\201703130321567_AddedRestrictionsForBookEntity.Designer.cs">
+      <DependentUpon>201703130321567_AddedRestrictionsForBookEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703130343096_ChangedRestrictionsForBookEntity.cs" />
+    <Compile Include="Migrations\201703130343096_ChangedRestrictionsForBookEntity.Designer.cs">
+      <DependentUpon>201703130343096_ChangedRestrictionsForBookEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Role.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -56,6 +65,14 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201703130321567_AddedRestrictionsForBookEntity.resx">
+      <DependentUpon>201703130321567_AddedRestrictionsForBookEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703130343096_ChangedRestrictionsForBookEntity.resx">
+      <DependentUpon>201703130343096_ChangedRestrictionsForBookEntity.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
