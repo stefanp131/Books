@@ -1,0 +1,13 @@
+C:\Users\stefa\Documents\Visual Studio 2017\Projects\Books\Books.Repositories\bin\Debug\Books.Repositories.dll.config
+C:\Users\stefa\Documents\Visual Studio 2017\Projects\Books\Books.Repositories\bin\Debug\Books.Repositories.dll
+C:\Users\stefa\Documents\Visual Studio 2017\Projects\Books\Books.Repositories\bin\Debug\Books.Repositories.pdb
+C:\Users\stefa\Documents\Visual Studio 2017\Projects\Books\Books.Repositories\bin\Debug\Books.DAL.dll
+C:\Users\stefa\Documents\Visual Studio 2017\Projects\Books\Books.Repositories\bin\Debug\EntityFramework.dll
+C:\Users\stefa\Documents\Visual Studio 2017\Projects\Books\Books.Repositories\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\stefa\Documents\Visual Studio 2017\Projects\Books\Books.Repositories\bin\Debug\Books.DAL.pdb
+C:\Users\stefa\Documents\Visual Studio 2017\Projects\Books\Books.Repositories\bin\Debug\Books.DAL.dll.config
+C:\Users\stefa\Documents\Visual Studio 2017\Projects\Books\Books.Repositories\bin\Debug\EntityFramework.xml
+C:\Users\stefa\Documents\Visual Studio 2017\Projects\Books\Books.Repositories\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\stefa\Documents\Visual Studio 2017\Projects\Books\Books.Repositories\obj\Debug\Books.Repositories.csprojResolveAssemblyReference.cache
+C:\Users\stefa\Documents\Visual Studio 2017\Projects\Books\Books.Repositories\obj\Debug\Books.Repositories.dll
+C:\Users\stefa\Documents\Visual Studio 2017\Projects\Books\Books.Repositories\obj\Debug\Books.Repositories.pdb

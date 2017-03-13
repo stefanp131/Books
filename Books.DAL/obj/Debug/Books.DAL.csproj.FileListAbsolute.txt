@@ -1,0 +1,10 @@
+C:\Users\stefa\Documents\Visual Studio 2017\Projects\Books\Books.DAL\obj\Debug\Books.DAL.csprojResolveAssemblyReference.cache
+C:\Users\stefa\Documents\Visual Studio 2017\Projects\Books\Books.DAL\bin\Debug\Books.DAL.dll.config
+C:\Users\stefa\Documents\Visual Studio 2017\Projects\Books\Books.DAL\bin\Debug\Books.DAL.dll
+C:\Users\stefa\Documents\Visual Studio 2017\Projects\Books\Books.DAL\bin\Debug\Books.DAL.pdb
+C:\Users\stefa\Documents\Visual Studio 2017\Projects\Books\Books.DAL\bin\Debug\EntityFramework.dll
+C:\Users\stefa\Documents\Visual Studio 2017\Projects\Books\Books.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\stefa\Documents\Visual Studio 2017\Projects\Books\Books.DAL\bin\Debug\EntityFramework.xml
+C:\Users\stefa\Documents\Visual Studio 2017\Projects\Books\Books.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\stefa\Documents\Visual Studio 2017\Projects\Books\Books.DAL\obj\Debug\Books.DAL.dll
+C:\Users\stefa\Documents\Visual Studio 2017\Projects\Books\Books.DAL\obj\Debug\Books.DAL.pdb
