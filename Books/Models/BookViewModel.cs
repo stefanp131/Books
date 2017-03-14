@@ -9,7 +9,7 @@ namespace Books.Models
         [StringLength(50)]
         public string Title { get; set; }
         [StringLength(50)]
-        public string AuthorName { get; set; }
+        public string Author { get; set; }
         [Range(0, 100)]
         public decimal Price { get; set; }
         [StringLength(50)]

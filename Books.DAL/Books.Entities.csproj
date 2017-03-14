@@ -61,6 +61,18 @@
     <Compile Include="Migrations\201703131436452_ChangedRelationshipBetweenEntitiesToManyToMany.Designer.cs">
       <DependentUpon>201703131436452_ChangedRelationshipBetweenEntitiesToManyToMany.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703141126028_AddedBookNameForPerson.cs" />
+    <Compile Include="Migrations\201703141126028_AddedBookNameForPerson.Designer.cs">
+      <DependentUpon>201703141126028_AddedBookNameForPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703141155487_ChangedAuthorNameColumn.cs" />
+    <Compile Include="Migrations\201703141155487_ChangedAuthorNameColumn.Designer.cs">
+      <DependentUpon>201703141155487_ChangedAuthorNameColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703141210109_RechangedBackToAuthor.cs" />
+    <Compile Include="Migrations\201703141210109_RechangedBackToAuthor.Designer.cs">
+      <DependentUpon>201703141210109_RechangedBackToAuthor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Role.cs" />
     <Compile Include="Person.cs" />
@@ -79,6 +91,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703131436452_ChangedRelationshipBetweenEntitiesToManyToMany.resx">
       <DependentUpon>201703131436452_ChangedRelationshipBetweenEntitiesToManyToMany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703141126028_AddedBookNameForPerson.resx">
+      <DependentUpon>201703141126028_AddedBookNameForPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703141155487_ChangedAuthorNameColumn.resx">
+      <DependentUpon>201703141155487_ChangedAuthorNameColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703141210109_RechangedBackToAuthor.resx">
+      <DependentUpon>201703141210109_RechangedBackToAuthor.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

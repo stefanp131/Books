@@ -37,7 +37,9 @@ namespace Books.Controllers
         {
             if (ModelState.IsValid)
             {
-                personRepository.AddEntity(personVm.MapPerson());
+                var person = personVm.MapPerson();
+                personRepository.AddEntity(person);
+
                 return RedirectToAction("Index");
             }
             return View(new PersonViewModel());

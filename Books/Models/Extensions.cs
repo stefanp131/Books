@@ -10,7 +10,7 @@ namespace Books.Models
             var bookVm = new BookViewModel
             {
                 Id = book.Id,
-                AuthorName = book.AuthorName,
+                Author = book.Author,
                 Price = book.Price,
                 Category = book.Category,
                 Title = book.Title
@@ -24,7 +24,7 @@ namespace Books.Models
             var book = new Book
             {
                 Id = bookVm.Id,
-                AuthorName = bookVm.AuthorName,
+                Author = bookVm.Author,
                 Price = bookVm.Price,
                 Category = bookVm.Category,
                 Title = bookVm.Title
@@ -35,14 +35,14 @@ namespace Books.Models
 
         public static PersonViewModel MapPerson(this Person person)
         {
-            var personVm = new PersonViewModel {Id = person.Id, Name = person.Name, Role = person.Role.MapRole() };
+            var personVm = new PersonViewModel {Id = person.Id, BookName = person.BookName, Name = person.Name, Role = person.Role.MapRole() };
 
             return personVm;
         }
 
         public static Person MapPerson(this PersonViewModel personVm)
         {
-            var person = new Person {Id = personVm.Id, Name = personVm.Name, Role = personVm.Role.MapRole() };
+            var person = new Person {Id = personVm.Id, BookName= personVm.BookName, Name = personVm.Name, Role = personVm.Role.MapRole() };
 
             return person;
         }

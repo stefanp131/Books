@@ -39,7 +39,7 @@ namespace Books.Controllers
                 var book = bookVm.MapBook();
 
                 var people = personRepository.GetAll().ToList();
-                var person = people.FirstOrDefault(x => x.Name == book.AuthorName);
+                var person = people.FirstOrDefault(x => x.Name == book.Author);
 
                 if (person != null)
                 {
@@ -48,7 +48,7 @@ namespace Books.Controllers
                 }
                 else
                 {
-                    person = new Person { Name = book.AuthorName, Role = Role.Author, Id = 0 };
+                    person = new Person { Name = book.Author, BookName=book.Title, Role = Role.Author, Id = 0 };
                     personRepository.AddEntity(person);
                     person.RoleShelf.Add(book);
                     personRepository.Save();
@@ -78,7 +78,7 @@ namespace Books.Controllers
             {
                 var book = bookRepository.GetEntityById(bookVm.Id);
                 {
-                    book.AuthorName = bookVm.AuthorName;
+                    book.Author = bookVm.Author;
                     book.Title = bookVm.Title;
                     book.Price = bookVm.Price;
                     book.Category = bookVm.Category;

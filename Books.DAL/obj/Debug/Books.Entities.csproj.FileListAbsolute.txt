@@ -12,3 +12,6 @@ C:\Users\stefa\Documents\Visual Studio 2017\Projects\Books\Books.DAL\obj\Debug\B
 C:\Users\stefa\Documents\Visual Studio 2017\Projects\Books\Books.DAL\obj\Debug\Books.Entities.csproj.GenerateResource.Cache
 C:\Users\stefa\Documents\Visual Studio 2017\Projects\Books\Books.DAL\obj\Debug\Books.DAL.Migrations.ChangedRestrictionsForBookEntity.resources
 C:\Users\stefa\Documents\Visual Studio 2017\Projects\Books\Books.DAL\obj\Debug\Books.DAL.Migrations.ChangedRelationshipBetweenEntitiesToManyToMany.resources
+C:\Users\stefa\Documents\Visual Studio 2017\Projects\Books\Books.DAL\obj\Debug\Books.DAL.Migrations.AddedBookNameForPerson.resources
+C:\Users\stefa\Documents\Visual Studio 2017\Projects\Books\Books.DAL\obj\Debug\Books.DAL.Migrations.ChangedAuthorNameColumn.resources
+C:\Users\stefa\Documents\Visual Studio 2017\Projects\Books\Books.DAL\obj\Debug\Books.DAL.Migrations.RechangedBackToAuthor.resources
